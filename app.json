@@ -1,11 +1,13 @@
 {
   "name": "Node-RED for heroku",
-  "description": "",
+  "description": "Deploy Node-RED",
   "keywords": [
     "Node-RED"
   ],
   "repository": "https://github.com/high-u/heroku_node-red",
-  "logo": "",
+  "success_url": "/red",
+  "scripts": {
+  },
   "env": {
     "NODERED_USER": {
       "description": "login username",
@@ -20,8 +22,14 @@
       "value": "*"
     },
     "NODERED_ADMIN_ROOT": {
-      "description": "flow editor access url",
+      "description": "'flow editor access url' or 'false'",
       "value": "/red"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
     }
   },
   "addons": [
