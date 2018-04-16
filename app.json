@@ -1,0 +1,29 @@
+{
+  "name": "Node-RED for heroku",
+  "description": "",
+  "keywords": [
+    "Node-RED"
+  ],
+  "repository": "https://github.com/high-u/heroku_node-red",
+  "logo": "",
+  "env": {
+    "NODERED_USER": {
+      "description": "login username",
+      "value": "admin"
+    },
+    "NODERED_PASSWORD": {
+      "description": "login password",
+      "value": "$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN."
+    },
+    "NODERED_PERMISSIONS": {
+      "description": "* (full access) or read (read only)",
+      "value": "*"
+    },
+    "NODERED_ADMIN_ROOT": {
+      "description": "flow editor access url",
+      "value": "/red"
+    }
+  },
+  "addons": [
+  ]
+}
