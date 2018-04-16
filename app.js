@@ -30,9 +30,13 @@ var settings = {
   functionGlobalContext: {
 
   },    // グローバルコンテキストを有効化
+  // httpNodeCors: {
+  //   origin: "*",
+  //   methods: "GET,PUT,POST,DELETE"
+  // },
   logging: {
     console: {
-      level: "trace",
+      level: process.env.NODERED_LOG_LEVEL || "trace",
       metrics: false,
       audit: false
     }

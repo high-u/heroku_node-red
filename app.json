@@ -18,12 +18,16 @@
       "value": "$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN."
     },
     "NODERED_PERMISSIONS": {
-      "description": "* (full access) or read (read only)",
-      "value": "*"
+      "description": "* (full access), read (read only)",
+      "value": "read"
     },
     "NODERED_ADMIN_ROOT": {
-      "description": "'flow editor access url' or 'false'",
+      "description": "flow editor access url, false (UI disable, API disable)",
       "value": "/red"
+    },
+    "NODERED_LOG_LEVEL": {
+      "description": "off, fatal, error, warn, info, debug, trace",
+      "value": "off"
     }
   },
   "formation": {
