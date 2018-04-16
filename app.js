@@ -15,10 +15,32 @@ var server = http.createServer(app);
 // 設定オブジェクトの生成 - 他のオプションについてはデフォルトの 'settings.js' ファイルを参照してください
 var settings = {
   uiPort: port,
-  httpAdminRoot:"/",
+  httpAdminRoot: process.env.NODERED_ADMIN_ROOT || "/red",
   httpNodeRoot: "/api",
-  userDir:"./node-red_userdir",
-  functionGlobalContext: { }    // グローバルコンテキストを有効化
+  userDir:`${__dirname}/node-red_userdir`,
+  flowFile: "flows.json",
+  adminAuth: {
+    type: "credentials",
+    users: [{
+      username: process.env.NODERED_USER || "admin",
+      password: process.env.NODERED_PASSWORD || "$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN.",
+      permissions: process.env.NODERED_PERMISSIONS || "*"
+    }]
+  },
+  functionGlobalContext: {
+
+  },    // グローバルコンテキストを有効化
+  logging: {
+    console: {
+      level: "trace",
+      metrics: false,
+      audit: false
+    }
+  },
+  debugMaxLength: 1000,
+  debugUseColors: true,
+  ui: { path: 'ui' },
+  credentialSecret: "a-secret-key"
 };
 
 // サーバと設定とランタイムの初期化

@@ -1,5 +1,11 @@
 {
-    "name": "node-red-project",
-    "description": "A Node-RED Project",
-    "version": "0.0.1"
+  "name": "node-red-project",
+  "description": "A Node-RED Project",
+  "version": "0.0.1",
+  "dependencies": {
+    "node-red-contrib-os": "~0.1.7",
+    "node-red-contrib-postgres": "~0.6.1",
+    "node-red-contrib-process-env": "~0.1.5",
+    "node-red-contrib-redis": "~1.1.7"
+  }
 }
