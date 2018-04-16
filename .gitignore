@@ -1,5 +1,4 @@
 node_modules/
-node-red_userdir/.config.json
 node-red_userdir/.sessions.json
 node-red_userdir/.flows.json.backup
 node-red_userdir/package-lock.json
